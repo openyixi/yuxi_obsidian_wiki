@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <title>AI English · 精听播放器</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff6b35'/%3E%3Cpath d='M18 42V22h10c8 0 12 3 12 9s-4 9-12 9h-4v2zm6-8h4c4 0 6-1 6-3s-2-3-6-3h-4z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">AI ENGLISH · 精听</p>
+        <h1>Full AI Prompting Course</h1>
+      </div>
+      <button id="themeButton" class="icon-button" aria-label="切换明暗主题">◐</button>
+    </header>
+
+    <section class="video-panel" aria-label="课程视频">
+      <div id="player"></div>
+      <div class="video-fallback">
+        <strong>视频加载中</strong>
+        <span>若视频无法播放，请检查网络连接。</span>
+      </div>
+    </section>
+
+    <section class="reader" aria-label="同步英文原文">
+      <div class="reader-head">
+        <div>
+          <span id="sectionLabel" class="section-label">AI novice vs power user</span>
+          <span id="progressLabel" class="progress-label">00:00 / 02:28:01</span>
+        </div>
+        <button id="focusButton" class="text-button" aria-pressed="false">专注模式</button>
+      </div>
+      <div id="transcript" class="transcript" tabindex="0"></div>
+    </section>
+  </main>
+
+  <nav class="player-controls" aria-label="播放控制">
+    <label class="speed-control">倍速
+      <select id="speedSelect" aria-label="播放速度">
+        <option value="0.75">0.75×</option>
+        <option value="1" selected>1.0×</option>
+        <option value="1.25">1.25×</option>
+        <option value="1.5">1.5×</option>
+        <option value="2">2.0×</option>
+      </select>
+    </label>
+    <button id="previousButton" aria-label="上一句">|◀</button>
+    <button id="playButton" class="play-button" aria-label="播放或暂停">▶</button>
+    <button id="nextButton" aria-label="下一句">▶|</button>
+    <button id="loopButton" aria-label="单句循环" aria-pressed="false">↻<span>单句</span></button>
+  </nav>
+
+  <script src="transcript-data.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="app.js"></script>
+</body>
+</html>

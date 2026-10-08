@@ -1,0 +1,36 @@
+.ai-english-listening .markdown-preview-view,
+.ai-english-listening .markdown-source-view.mod-cm6 .cm-content {
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+.ai-english-listening ruby.vocab {
+  margin: 0 .12em;
+  padding: .02em .16em;
+  border-radius: .28em;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.ai-english-listening ruby.vocab rt {
+  padding-top: 2px;
+  color: var(--text-muted);
+  font-family: var(--font-interface);
+  font-size: .62em;
+  font-weight: 500;
+}
+
+.ai-english-listening ruby.pink { background: rgba(255, 124, 166, .28); }
+.ai-english-listening ruby.blue { background: rgba(92, 179, 255, .25); }
+.ai-english-listening ruby.yellow { background: rgba(255, 211, 72, .28); }
+.ai-english-listening ruby.green { background: rgba(86, 204, 143, .25); }
+
+.ai-english-listening hr {
+  margin: 1.5rem 0;
+  border-color: var(--background-modifier-border);
+}
+
+.ai-english-listening iframe {
+  background: #111;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .18);
+}
